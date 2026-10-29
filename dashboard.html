@@ -1,0 +1,18 @@
+
+{% extends "base.html" %}
+{% block content %}
+<section class="card dashboard">
+    <div class="symbol">✓</div>
+    <h1>Welcome, {{ name }}!</h1>
+    <p class="subtitle">You have successfully signed in.</p>
+
+    <div class="secure-box">
+        <h3>Account Protected</h3>
+        <p>Your session is active. Only logged-in users can access this dashboard.</p>
+    </div>
+
+    <form method="POST" action="{{ url_for('logout') }}">
+        <button type="submit">Log Out</button>
+    </form>
+</section>
+{% endblock %}
